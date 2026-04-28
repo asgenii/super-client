@@ -1,0 +1,5 @@
+command:
+  name:
+    general: exit
+    additional: []
+  description: force close
