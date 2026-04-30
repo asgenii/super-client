@@ -34,6 +34,6 @@ class Command:
         os.chdir("src")
         
         with open("exec.py", "w", encoding="utf-8") as file:
-            file.write("def run(args):\n    pass")
+            file.write("def run(args):\n    return \"Hello World!\"")
 
         os.chdir(current_dir)

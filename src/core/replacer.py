@@ -22,7 +22,7 @@ class Replacer:
                         with open(f"{self.path}/.original/index.json", "r", encoding="utf-8") as file:
                             index = json.load(file)
                             index[data[n].split("/")[-1]] = data[n]
-
+    
                     with open(f"{self.path}/.original/index.json", "w", encoding="utf-8") as file:
                         json.dump(index, file, indent=4, ensure_ascii=True)
 
