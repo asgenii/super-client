@@ -1,6 +1,6 @@
 
 import src.models.command as command
-command = command.Command("src/cli/internal/commands")
+command = command.Command("temp/")
 
 # command.add({
 #     "catalog": "",
@@ -10,10 +10,10 @@ command = command.Command("src/cli/internal/commands")
 # })
 
 command.build({
-    "catalog": "exit",
-    "general": "exit",
+    "catalog": "hw",
+    "general": "hw",
     "additional": [],
-    "description": "shuts scripts down",
+    "description": "hw",
 })
 
 #################################################

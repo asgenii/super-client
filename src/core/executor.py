@@ -6,5 +6,5 @@ class Executor:
         try:
             return module.run(args)
         
-        except AttributeError:
-            return None
+        except Exception as e:
+            return e

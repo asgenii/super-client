@@ -1,0 +1,5 @@
+command:
+  name:
+    general: pkg
+    additional: []
+  description: downloading packages from repository to client

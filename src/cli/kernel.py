@@ -1,12 +1,11 @@
 class Kernel:
-    def __init__(self, Shell, Loader, Executor, Replacer):
+    def __init__(self, Shell, Loader, Executor):
         self.Shell = Shell
         self.Loader = Loader
         self.Executor = Executor
-        self.Replacer = Replacer
 
     def startup(self):
-        self.Replacer.replace()
+        print("[OK]")
 
     def run(self):
         self.startup()

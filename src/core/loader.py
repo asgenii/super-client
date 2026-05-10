@@ -6,21 +6,26 @@ class Loader:
 
     def load_module(self, command):
         found = False
-        for paths in [self.path, "src/cli/internal/commands"]:
-            for path in os.listdir(paths):
-                with open(f"{paths}/{path}/config.yml", "r", encoding="utf-8") as file:
+        for paths in ["commands/system", "commands/user"]:
+            if found:
+                break
+
+            for subdir in os.listdir(paths):
+                with open(f"{paths}/{subdir}/config.yml", "r", encoding="utf-8") as file:
                     config = yaml.safe_load(file)
                     config_general = config["command"]["name"]["general"]
                     config_additional = config["command"]["name"]["additional"]
 
                 if command == config_general or command == config_additional:
-                    return config_general, True
+                    module_path = f"{paths}/{config_general}/src/exec.py"
+                    found = True
+                    break
 
-                if found == False:
-                    return "command wasnt found" # create log i guess?
+        if not found:
+            return "command wasnt found"
         
         try:
-            spec = importlib.util.spec_from_file_location("exec.py", f"{self.path}/{config_general}/src/exec.py")
+            spec = importlib.util.spec_from_file_location("exec.py", module_path)
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
             return module
