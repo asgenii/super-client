@@ -1,6 +1,6 @@
 class Executor:
-    def __init__(self, path):
-        self.path = path
+    def __init__(self):
+        ...
 
     def exec(self, module, args):
         try:

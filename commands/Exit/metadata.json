@@ -1,0 +1,18 @@
+{
+    "enabled": true,
+
+    "name": "Exit",
+    "type": "system",
+    "version": 1.0,
+    "author": "super",
+    "usage": "exit",
+    "description": "Shuts the shell down",
+
+    "aliases": ["exit"],
+    "entry": "src/run.py",
+    "requirements": [],
+    "invisible": false,
+    "supered": false,
+
+    "index": null
+}

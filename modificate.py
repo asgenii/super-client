@@ -1,6 +1,6 @@
 
 import src.models.command as command
-command = command.Command("temp/")
+command = command.Command()
 
 # command.add({
 #     "catalog": "",
@@ -9,12 +9,7 @@ command = command.Command("temp/")
 #     "description": "",
 # })
 
-command.build({
-    "catalog": "hw",
-    "general": "hw",
-    "additional": [],
-    "description": "hw",
-})
+command.build("Package")
 
 #################################################
 # import src.models.plugin as plugin

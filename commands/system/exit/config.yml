@@ -1,5 +1,0 @@
-command:
-  name:
-    general: exit
-    additional: []
-  description: shuts scripts down

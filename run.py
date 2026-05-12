@@ -4,8 +4,8 @@ import src.core.loader as loader
 import src.core.executor as executor
 
 Shell = shell.Shell("super#")
-Loader = loader.Loader("commands/")
-Executor = executor.Executor("commands/")
+Loader = loader.Loader()
+Executor = executor.Executor()
 
 Kernel = kernel.Kernel(Shell, Loader, Executor)
 Kernel.run()

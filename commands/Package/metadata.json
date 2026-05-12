@@ -1,0 +1,18 @@
+{
+    "enabled": true,
+
+    "name": "Package",
+    "type": "system",
+    "version": 0.1,
+    "author": "super",
+    "usage": "package [download]",
+    "description": "Allow you to manage packages",
+
+    "aliases": ["package", "pkg"],
+    "entry": "src/run.py",
+    "requirements": ["network"],
+    "invisible": false,
+    "supered": true,
+
+    "index": null
+}
